@@ -2,6 +2,15 @@
 
 In which I post some of the sample projects I've used for Radars to GitHub. 
 
+### [Named Colors == IBDesignables Crasher](IBDesignablesCrasher/README.md)
+
+If you're trying to use named colors from an asset catalog in your main bundle in an IBDesignable which is also in your main bundle, they work fine when force-unwrapped at runtime and crash when force-unwrapped in IB unless you specify `Bundle(for: [any class in your main bundle)`. 
+
+**January 8, 2019**
+
+- Open Radar: [http://openradar.appspot.com/radar?id=4968845257211904](http://openradar.appspot.com/radar?id=4968845257211904)
+- Apple Radar: [rdar://47113341](rdar://47113341)
+
 ### [Nav Bar Transition Funtimes](NavBarTransitionFuntimes/README.md)
 
 When you have a transition between different colors for a nav bar's tint color and/or title text color, it works fine when the interactive transition is used and is a hot mess when you just pop the view controller.

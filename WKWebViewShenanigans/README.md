@@ -13,6 +13,11 @@ It's very frustrating to have this work very differently on device and on the Si
 
 Yes, yes, yes: Test on device. But this is a big enough functionality change that it seems really incongruous to have it work fine on the Sim and die on device.
 
+**January 16, 2019**
+
+- Open Radar: [http://openradar.appspot.com/radar?id=4944480041959424](http://openradar.appspot.com/radar?id=4944480041959424)
+- Apple Radar: [rdar://47312413](rdar://47312413)
+
 ## You can only load files from one URL at a time. 
 
 This is particularly annoying on iPads. On iPhones, the odds are a lot higher that you'd be recreating the web view by creating and pushing a new view controller if you're looking at a new document. On iPads, you're likely going to prefer reusing an existing view controller, and that's where everything goes pear-shaped.
@@ -34,3 +39,8 @@ There is no way to reset the folder the `WKWebView` has access to. Subsequent ca
 Attempting to pass your application's sandbox directory (which is the direct parent of the user's Documents directory and the grandparent of the Caches directory) doesn't do anything. 
 
 Even though this is a shared parent of both  Documents and Caches, you still receive security errors attempting to load any local file when this is passed in.
+
+**January 16, 2019**
+
+- Open Radar: [http://openradar.appspot.com/radar?id=5022322029232128](http://openradar.appspot.com/radar?id=5022322029232128)
+- Apple Radar: [rdar://47312604](rdar://47312604)

@@ -2,6 +2,22 @@
 
 In which I post some of the sample projects I've used for Radars to GitHub. 
 
+### [Assorted `WKWebView` Shenanigans](WKWebViewShenanigans/README.md)
+
+`WKWebView` behaves differently between simulator and device when loading local files. TL;DR: Always test on device.
+
+**January 16, 2019**
+
+- Open Radar: [http://openradar.appspot.com/radar?id=4944480041959424](http://openradar.appspot.com/radar?id=4944480041959424)
+- Apple Radar: [rdar://47312413](rdar://47312413)
+
+On device, the same instance of `WKWWebView` cannot load things from different folders, even when permission is explicitly granted to do so, because only the first URL passed in to `loadFileURL(_, allowingReadAccessTo:)` is actually given read permissions. 
+
+**January 16, 2019**
+
+- Open Radar: [http://openradar.appspot.com/radar?id=5022322029232128](http://openradar.appspot.com/radar?id=5022322029232128)
+- Apple Radar: [rdar://47312604](rdar://47312604)
+
 ### [Named Colors == IBDesignables Crasher](IBDesignablesCrasher/README.md)
 
 If you're trying to use named colors from an asset catalog in your main bundle in an IBDesignable which is also in your main bundle, they work fine when force-unwrapped at runtime and crash when force-unwrapped in IB unless you specify `Bundle(for: [any class in your main bundle)`. 
